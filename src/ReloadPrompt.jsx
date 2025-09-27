@@ -1,6 +1,7 @@
+import React from 'react'
 import './ReloadPrompt.css'
 
-import { useRegisterSW } from 'virtual:pwa-register/preact'
+import { useRegisterSW } from 'virtual:pwa-register/react'
 
 function ReloadPrompt() {
   const {
@@ -26,7 +27,7 @@ function ReloadPrompt() {
     <div className="ReloadPrompt-container">
       { (offlineReady || needRefresh)
         && <div className="ReloadPrompt-toast">
-            <div className="ReloadPrompt-toast-message">
+            <div className="ReloadPrompt-message">
               { offlineReady
                 ? <span>App ready to work offline</span>
                 : <span>New content available, click on reload button to update.</span>
